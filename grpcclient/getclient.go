@@ -14,12 +14,8 @@ func FindServiceName(functionName string) string {
 		return "fibonacci"
 	case "compression-python":
 		return "compression"
-	case "graph-bfs-python":
-		return "graph-bfs"
 	case "gptj-python":
 		return "gptj"
-	case "bert-python":
-		return "bert"		
 	case "image-rotate-python", "image-rotate-nodejs", "image-rotate-go", "image-rotate-cython":
 		return "image-rotate"
 	case "video-processing-python":
@@ -30,6 +26,8 @@ func FindServiceName(functionName string) string {
 		return "video-analytics-standalone"
 	case "spright-parking-python":
 		return "spright-parking"
+	case "bert-python":
+		return "bert"
 	default:
 		return functionName
 	}
@@ -54,15 +52,12 @@ func FindGrpcClient(service_name string) GrpcClient {
 	case "compression":
 		log.Debug("Found Compression client")
 		return new(FileCompressClient)
-	case "graph-bfs":
-		log.Debug("Found Graph BFS client")
-		return new(GraphBFSClient)
+	case "bert":
+		log.Debug("Found Bert client")
+		return new(BertClient)
 	case "gptj":
 		log.Debug("Found gptj client")
 		return new(GptJClient)
-	case "bert":
-		log.Debug("Found Bert client")
-		return new(BertClient)		
 	case "image-rotate":
 		log.Debug("Found image rotate client")
 		return new(ImageRotateClient)
