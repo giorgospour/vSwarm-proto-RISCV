@@ -1,5 +1,4 @@
-module github.com/vhive-serverless/vSwarm-proto
-
+module github.com/giorgospour/vSwarm-proto-RISCV
 go 1.21
 
 toolchain go1.21.4
