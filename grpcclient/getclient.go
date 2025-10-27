@@ -18,6 +18,8 @@ func FindServiceName(functionName string) string {
 		return "graph-bfs"
 	case "gptj-python":
 		return "gptj"
+	case "bert-python":
+		return "bert"		
 	case "image-rotate-python", "image-rotate-nodejs", "image-rotate-go", "image-rotate-cython":
 		return "image-rotate"
 	case "video-processing-python":
@@ -58,6 +60,9 @@ func FindGrpcClient(service_name string) GrpcClient {
 	case "gptj":
 		log.Debug("Found gptj client")
 		return new(GptJClient)
+	case "bert":
+		log.Debug("Found Bert client")
+		return new(BertClient)		
 	case "image-rotate":
 		log.Debug("Found image rotate client")
 		return new(ImageRotateClient)

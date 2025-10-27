@@ -15,7 +15,7 @@ var (
 	defCreditCard = pb.CreditCardInfo{
 		CreditCardNumber:          "5496524458927653",
 		CreditCardCvv:             123,
-		CreditCardExpirationYear:  2025,
+		CreditCardExpirationYear:  2029,
 		CreditCardExpirationMonth: 3,
 	}
 	defAddress = pb.Address{
