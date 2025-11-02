@@ -26,7 +26,7 @@ import (
 	"fmt"
 
 	// log "github.com/sirupsen/logrus"
-	pb "github.com/vhive-serverless/vSwarm-proto/proto/bert"
+	pb "github.com/giorgospour/vSwarm-proto-RISCV/proto/bert"
 )
 
 type BertGenerator struct {
